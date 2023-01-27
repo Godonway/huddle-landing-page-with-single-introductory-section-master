@@ -1,0 +1,187 @@
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)  */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+  /* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  background-color:var(--Violet);
+  color:white;
+  text-align:center;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Poppins', sans-serif; 
+  font-weight:400;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  display:block;
+}
+
+.wrapper{
+  padding:2.5rem 2rem;
+  background-image:url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+header img{
+  width:50%;
+}
+
+.illustrator img{
+  margin-block:3rem;
+}
+
+.about_illustrator h2{
+  font-weight:600;
+}
+
+.about_illustrator p{
+  margin-block:1.5rem 2rem;
+}
+
+.about_illustrator a{
+  display:inline-block;
+  margin:auto;
+  background-color:white;
+  color:var(--Violet);
+  padding:1rem 5rem;
+  border-radius:3rem;
+}
+footer{
+  margin-top:5rem;
+  }
+footer .icons{
+  display:inline-block;
+  width:30px;
+  aspect-ratio:1/1;
+  padding-top:7px;
+  border:1px solid;
+  border-radius:50%;
+  text-align:center;
+}
+
+@media (min-width:700px){
+  .wrapper{
+    height:100vh;
+    padding:3rem 5rem;
+    background-image:url(images/bg-desktop.svg);
+    background-position: -60px -35px;
+    background-size:80rem
+        }
+
+  .illustrator{
+    margin-top:2rem;
+    display:flex;
+    gap:2.5rem;
+     }
+
+  header img{
+      width:200px;
+     }
+  .about_illustrator{
+      text-align:left;
+      padding-top:3rem;
+    }
+    
+  .illustrator img,.about_illustrator{
+      flex:1;
+    }
+  .about_illustrator a{
+      margin:0;
+      text-align:center;
+        }
+ footer{
+      text-align:right;
+      margin-top:3rem;
+      
+    }
+
+}
+
+@media(min-width:1000px){
+  
+  .illustrator{
+    width: 90%;
+  }
+  .illustrator img{
+     margin-block:3rem 0rem;
+  }
+  .about_illustrator h2{
+    font-size:2rem;
+    padding-right:3rem;
+  }
+  .about_illustrator{
+    text-align:left;
+    padding-top:6rem;
+  }
+  footer{
+    margin-top:1rem;
+    }
+
+
+}
+
+.icons:hover{
+  color:var(--Soft-Magenta);
+  border-color:var(--Soft-Magenta);
+  cursor:pointer;
+}
+.about_illustrator a:hover{
+  background-color:var(--Soft-Magenta);
+  color:white;
+}
+ 
